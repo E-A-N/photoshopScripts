@@ -1,4 +1,4 @@
-var dBug = function() {
+function dBug() {
     var lays = app.activeDocument.layers;
     var debugName = "debug::x";
     var debugExists = false;
