@@ -1,26 +1,22 @@
-function makeDebug(){
-    var layers = app.activeDocument.layers;
+var dBug = function() {
+    var lays = app.activeDocument.layers;
     var debugName = "debug::x";
     var debugExists = false;
-    for (var i = 0; i < layers.length; i++){
-        if (layers[i].name == debugName){
-            debugExists = true;
-            break;
+    var debuggerXX = null;
+
+    for (var i = 0; i < lays.length; i++) {
+        var name = lays[i].name;
+        if (name == debugName){
+            return;
         }
     }
 
-    if (debugExists){
-        alert("debugger already exists!");
-    }
-    else {
-        var bug = layers.add();
-        bug.kind = LayerKind.TEXT;
-        var textItem = bug.textItem;
-        textItem.kind = TextType.PARAGRAPHTEXT;
-        textItem.size = 30;
-        textItem.position = [100, 100];
-        textItem.contents = "Hi! I'm the Debugger!;
-        textItem.width = new UnitValue("300 pixels");
-        textItem.height = new UnitValue("30 pixels");
-    }
+    var dbg = lays.add();
+    dbg.kind = LayerKind.TEXT;
+    var cont = dbg.textItem;
+    cont.contents = "hi, im the debugger";
+    cont.size = 30;
+    cont.position = [100, 100];
 }
+
+dBug();
