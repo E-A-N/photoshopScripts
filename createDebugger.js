@@ -1,5 +1,5 @@
 function makeDebug(){
-    var lays = app.activeDocument.layers;
+    var layers = app.activeDocument.layers;
     var debugName = "debug::x";
     var debugExists = false;
     for (var i = 0; i < layers.length; i++){
