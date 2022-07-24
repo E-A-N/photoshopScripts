@@ -7,16 +7,23 @@ function dBug() {
     for (var i = 0; i < lays.length; i++) {
         var name = lays[i].name;
         if (name == debugName){
-            return;
+            debugExists = true;
+            break;
         }
     }
 
-    var dbg = lays.add();
-    dbg.kind = LayerKind.TEXT;
-    var cont = dbg.textItem;
-    cont.contents = "hi, im the debugger";
-    cont.size = 30;
-    cont.position = [100, 100];
+    if (!debugExists){
+        var dbg = lays.add();
+        dbg.kind = LayerKind.TEXT;
+        var cont = dbg.textItem;
+        cont.contents = "Info: ";
+        cont.size = 30;
+        cont.position = [100, 100];
+        debuggerXX = cont;
+    }
+    
+
+    return debuggerXX;
 }
 
 dBug();
