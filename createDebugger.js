@@ -1,4 +1,4 @@
-function dBug() {
+function getDebug() {
     var lays = app.activeDocument.layers;
     var debugName = "debug::x";
     var debugExists = false;
@@ -28,4 +28,4 @@ function dBug() {
     return debuggerXX;
 }
 
-dBug();
+getDebug();
