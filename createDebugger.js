@@ -7,6 +7,7 @@ function dBug() {
     for (var i = 0; i < lays.length; i++) {
         var name = lays[i].name;
         if (name == debugName){
+            debuggerXX = lays[i].textItem;
             debugExists = true;
             break;
         }
@@ -14,6 +15,7 @@ function dBug() {
 
     if (!debugExists){
         var dbg = lays.add();
+        dbg.name = debugName;
         dbg.kind = LayerKind.TEXT;
         var cont = dbg.textItem;
         cont.contents = "Info: ";
