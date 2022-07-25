@@ -6,3 +6,5 @@
       - TextType
   - Can't assign anonymous functions to variables
   - It's Javascript but not ES6+
+  - Can't use undeclared variables (in JS they're undefined by default)
+  - Can't do conditionals against undeclared variables
