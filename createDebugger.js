@@ -28,4 +28,14 @@ function getDebug() {
     return debuggerXX;
 }
 
+function writeLog(text, append) {
+    var dbg = getDebug();
+    if (append){
+       dbg.contents += text; 
+    }
+    else {
+       dbg.contents = "Info: " + text; 
+    }
+}
+
 getDebug();
