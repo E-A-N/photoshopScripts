@@ -38,4 +38,4 @@ function writeLog(text, append) {
     }
 }
 
-getDebug();
+//writeLog("hello world", false);
